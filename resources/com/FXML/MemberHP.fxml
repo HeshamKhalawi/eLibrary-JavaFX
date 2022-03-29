@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="235.0" style="-fx-border-color: #1e558c;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Library.example.ics324library.Controller">
+    <children>
+        <HBox alignment="CENTER" prefHeight="45.0" style="-fx-background-color: #bdbdbd; -fx-border-color: #1e558c;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#backToLogin" style="-fx-background-color: #bdbdbd;" text="Out" textFill="#1e558c" underline="true" />
+                <Region layoutX="138.0" layoutY="10.0" prefWidth="25.0" />
+                <Label text="Library" textFill="#1e558c">
+                    <font>
+                        <Font name="Agency FB Bold" size="35.0" />
+                    </font>
+                </Label>
+                <Region prefWidth="55.0" />
+            </children>
+        </HBox>
+        <Region prefHeight="20.0" />
+        <Region layoutX="10.0" layoutY="116.0" prefHeight="65.0" />
+        <Region layoutX="10.0" layoutY="110.0" prefHeight="40.0" />
+        <Button mnemonicParsing="false" onAction="#toCatalog" prefWidth="185.0" style="-fx-background-radius: 10;" text="Search catalog" textFill="#1e558c">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+        </Button>
+        <Region layoutX="11.0" layoutY="242.0" prefHeight="40.0" />
+        <Button layoutX="47.0" layoutY="292.0" mnemonicParsing="false" onAction="#toInventory" prefWidth="185.0" style="-fx-background-radius: 10;" text="Renew &amp; Return" textFill="#1e558c">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+        </Button>
+    </children>
+</VBox>

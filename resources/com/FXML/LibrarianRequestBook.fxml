@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="420.0" prefWidth="235.0" style="-fx-border-color: #1e558c;" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Library.example.ics324library.Controller">
+    <children>
+        <HBox alignment="CENTER" prefHeight="45.0" style="-fx-background-color: #bdbdbd; -fx-border-color: #1e558c;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#backToLibrarianHP" style="-fx-background-color: #bdbdbd;">
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../resources/HomeIcon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Region layoutX="152.0" layoutY="11.0" prefWidth="30.0"/>
+                <Label text="Library" textFill="#1e558c">
+                    <font>
+                        <Font name="Agency FB Bold" size="35.0"/>
+                    </font>
+                </Label>
+                <Region prefWidth="65.0"/>
+            </children>
+        </HBox>
+        <Region layoutX="10.0" layoutY="116.0" prefHeight="10.0"/>
+        <HBox/>
+        <HBox alignment="CENTER_LEFT">
+            <children>
+                <Label text="Criterion:" textFill="#1e558c">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets right="2.0"/>
+                    </HBox.margin>
+                </Label>
+                <MenuButton mnemonicParsing="false" text="Select">
+                    <items>
+                        <RadioMenuItem mnemonicParsing="false" selected="true" text="Title">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="Criterion"/>
+                            </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" text="Author" toggleGroup="$Criterion"/>
+                        <RadioMenuItem mnemonicParsing="false" text="Subject" toggleGroup="$Criterion"/>
+                        <RadioMenuItem mnemonicParsing="false" text="Library ID" toggleGroup="$Criterion"/>
+                    </items>
+                </MenuButton>
+            </children>
+            <VBox.margin>
+                <Insets left="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <Region layoutX="11.0" layoutY="87.0" prefHeight="6.0"/>
+        <HBox spacing="10.0">
+            <children>
+                <TextField maxWidth="150.0" promptText="Type here">
+                    <HBox.margin>
+                        <Insets left="5.0"/>
+                    </HBox.margin>
+                </TextField>
+                <Button mnemonicParsing="false" text="Search"/>
+            </children>
+        </HBox>
+        <Region layoutX="11.0" layoutY="123.0" prefHeight="18.0"/>
+        <TableView prefHeight="189.0" prefWidth="223.0" style="-fx-border-color: #1e558c;">
+            <columns>
+                <TableColumn editable="false" prefWidth="42.985044956207275" text="Title"/>
+                <TableColumn prefWidth="50.865665435791016" text="Author"/>
+                <TableColumn prefWidth="58.74628448486328" text="Subject"/>
+                <TableColumn prefWidth="72.35821533203125" text="Library ID"/>
+            </columns>
+            <VBox.margin>
+                <Insets left="6.0" right="6.0"/>
+            </VBox.margin>
+        </TableView>
+        <Region prefHeight="10.0"/>
+        <HBox>
+            <children>
+                <Label text="Select a book to:" textFill="#1e558c">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets left="5.0"/>
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+        <Region layoutX="11.0" layoutY="309.0" prefHeight="10.0"/>
+        <HBox alignment="CENTER" spacing="30.0">
+            <children>
+                <Button maxWidth="-Infinity" mnemonicParsing="false" prefWidth="80.0" text="Request"/>
+            </children>
+        </HBox>
+    </children>
+</VBox>

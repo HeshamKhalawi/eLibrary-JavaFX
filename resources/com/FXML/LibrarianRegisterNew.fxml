@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="265.0" style="-fx-border-color: #1e558c;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Library.example.ics324library.Controller">
+    <children>
+        <HBox alignment="CENTER" prefHeight="45.0" style="-fx-background-color: #bdbdbd; -fx-border-color: #1e558c;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#backToLibrarianHP" style="-fx-background-color: #bdbdbd;" textFill="#1e558c" underline="true">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../resources/HomeIcon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Region layoutX="138.0" layoutY="10.0" prefWidth="30.0" />
+                <Label text="Library" textFill="#1e558c">
+                    <font>
+                        <Font name="Agency FB Bold" size="35.0" />
+                    </font>
+                </Label>
+                <Region prefWidth="65.0" />
+            </children>
+        </HBox>
+        <Region prefHeight="30.0" />
+        <HBox prefHeight="501.0" prefWidth="236.0">
+            <children>
+                <VBox prefWidth="150.0" spacing="3.0">
+                    <children>
+                        <Label layoutX="10.0" layoutY="10.0" text="ID*" textFill="#1e558c">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="registerID" layoutX="10.0" layoutY="31.0" prefWidth="150.0" />
+                        <Label layoutX="10.0" layoutY="67.0" text="First name*" textFill="#1e558c">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="registerFNAME" layoutX="10.0" layoutY="89.0" prefWidth="150.0" />
+                        <Label layoutX="10.0" layoutY="125.0" text="Last name*" textFill="#1e558c">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="registerLNAME" layoutX="10.0" layoutY="146.0" prefWidth="150.0" />
+                        <Label layoutX="10.0" layoutY="10.0" text="Address*" textFill="#1e558c">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="registerAddress" layoutX="10.0" layoutY="31.0" prefWidth="150.0" />
+                        <Label layoutX="10.0" layoutY="57.0" text="Phone NO.*" textFill="#1e558c">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="registerPhone" layoutX="10.0" layoutY="79.0" prefWidth="150.0" />
+                        <Label layoutX="10.0" layoutY="105.0" text="Email" textFill="#1e558c">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets right="5.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="registerEmail" layoutX="10.0" layoutY="126.0" prefWidth="150.0" />
+                  <Label layoutX="10.0" layoutY="270.0" prefHeight="21.0" prefWidth="65.0" text="Age*" textFill="#1e558c">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="registerAge" layoutX="10.0" layoutY="294.0" prefWidth="150.0" />
+                  <Label layoutX="10.0" layoutY="322.0" prefHeight="21.0" prefWidth="142.0" text="Password*" textFill="#1e558c">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="registerPassword" layoutX="10.0" layoutY="346.0" prefWidth="150.0" />
+                  <Label layoutX="10.0" layoutY="322.0" prefHeight="21.0" prefWidth="159.0" text="Premium member*:" textFill="#1e558c">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="150.0" />
+                  <RadioButton fx:id="registerPremium" mnemonicParsing="false" text="Yes">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Membership" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="registerBasic" mnemonicParsing="false" text="No" toggleGroup="$Membership" />
+                    </children>
+                    <HBox.margin>
+                        <Insets left="6.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+        </HBox>
+        <Region layoutX="11.0" layoutY="57.0" prefHeight="46.0" prefWidth="283.0" />
+      <HBox prefHeight="224.0" prefWidth="249.0">
+         <children>
+            <Label fx:id="registerError" prefHeight="69.0" prefWidth="278.0" textFill="#e82a2a" />
+         </children>
+      </HBox>
+        <Button fx:id="registerMember" mnemonicParsing="false" onAction="#registerUser" prefHeight="38.0" prefWidth="115.0" text="Add account" textFill="#1e558c">
+            <font>
+                <Font size="15.0" />
+            </font>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+        </Button>
+    </children>
+    <padding>
+        <Insets bottom="6.0" />
+    </padding>
+</VBox>
